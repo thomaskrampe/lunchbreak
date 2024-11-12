@@ -8,12 +8,12 @@ body, html {
 }
 
 .bgimg {
-  background-image: url('background/lab.jpg');
+  background-image: url('background/index.jpg');
   height: 100%;
   background-position: center;
   background-size: cover;
   position: relative;
-  color: white;
+  color: rgb(112, 112, 112);
   font-family: "Roboto", sans-serif;
   font-size: 28px;
   font-weight: 500;
@@ -42,9 +42,19 @@ body, html {
   color: rgb(255, 255, 255);
 }
 
+.bottomright {
+  position: absolute;
+  bottom: 0;
+  right: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(255, 255, 255);
+}
+
 .middle {
   position: absolute;
-  top: 40%;
+  top: 34%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -63,9 +73,15 @@ hr {
     <p><img src="logo/OBLogo_White_Text_250.png"></p>
   </div>
   <div class="middle">
-    <h1>Coffee Break</h1>
-    <hr>
-    <p id="countdown" style="font-size:50px"></p>
+    <h1>Virtual Break</h1>
+        <p style="font-size:30px"> Please choose one of the break types below.</p>
+        <br /><br />
+        <p>
+          <a href="coffee.html" title="Coffee 15 min."><img src="icons/l-coffee.png" width="64"></a>&nbsp;&nbsp;&nbsp;
+          <a href="break.html" title="Break 30 min."><img src="icons/l-break.png" width="64"></a>&nbsp;&nbsp;&nbsp;
+          <a href="lab.html" title="Lab 45 min."><img src="icons/l-lab.png" width="64"></a>&nbsp;&nbsp;&nbsp;
+          <a href="lunch.html" title="Lunch 60 min."><img src="icons/l-lunch.png" width="64"></a>&nbsp;&nbsp;&nbsp;
+       </p>
   </div>
   <div class="bottomleft">
     <!-- <p><img src="logo/thomaskrampe_logo_250.png"></p> -->
@@ -74,6 +90,7 @@ hr {
 </div>
 
 <script>
+
 // Set the date we're counting down to
 // var countDownDate = new Date("Sep 1, 2024 14:30:00").getTime();
 function addMinutes(date, minutes) {
@@ -83,7 +100,8 @@ function addMinutes(date, minutes) {
 }
 
 // Change the minutes here
-var countDownDate = addMinutes(new Date(), 30);
+var minutesToCount = 45
+var countDownDate = addMinutes(new Date(), minutesToCount);
 
 // Update the count down every 1 second
 var countdownfunction = setInterval(function() {
