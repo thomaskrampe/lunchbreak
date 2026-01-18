@@ -7,7 +7,7 @@ const countdownTitle = document.getElementById('countdown-title'); // NEU: Refer
 const titleSelect = document.getElementById('title-select');       // NEU: Referenz auf das Dropdown
 
 // ---------------------------------------------
-// NEUE FUNKTION: Aktualisiert die Überschrift
+// Aktualisiert die Überschrift
 // ---------------------------------------------
 function updateTitle() {
     const selectedTitle = titleSelect.options[titleSelect.selectedIndex].value;
@@ -30,7 +30,7 @@ function startCountdown(targetTimeMs) {
 
     messageDisplay.textContent = 'Countdown läuft...';
 
-    // NEU: Titel im laufenden Modus fixieren
+    // Titel im laufenden Modus fixieren
     updateTitle(); 
 
     countdownInterval = setInterval(() => {
@@ -70,7 +70,7 @@ function resetApp() {
     timerDisplay.textContent = '00:00:00';
     messageDisplay.textContent = 'Wähle einen Titel und eine Zeit.';
     
-    // NEU: Setzt das Dropdown und die Überschrift zurück
+    // Setzt das Dropdown und die Überschrift zurück
     titleSelect.selectedIndex = 0; 
     updateTitle(); 
 
@@ -82,7 +82,7 @@ function resetApp() {
 document.addEventListener('DOMContentLoaded', updateTitle);
 
 
-// --- Vorhandene Start-Funktionen (bleiben gleich) ---
+// --- Start-Funktionen ---
 
 function startCountdownByMinutes() {
     const minutesInput = document.getElementById('minutes').value;

@@ -4,6 +4,9 @@
 .AppleDouble
 .LSOverride
 
+# Credentials and environment variables
+.env
+
 # Icon must end with two \r
 Icon
 
