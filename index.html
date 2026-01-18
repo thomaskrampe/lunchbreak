@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universeller Countdown-Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="countdown-title">🕙 Countdown</h1>
+
+        <div id="input-controls">
+            <div class="input-section title-select-section">
+                <label for="title-select">Countdown für:</label>
+                <select id="title-select" onchange="updateTitle()">
+                    <option value="Countdown">Allgemeiner Countdown</option>
+                    <option value="Kaffeepause">Kaffeepause</option>
+                    <option value="Mittagspause">Mittagspause</option>
+                    <option value="Lab">Lab</option>
+                </select>
+            </div>
+            
+            <div class="input-section">
+                <label for="minutes">Minuten eingeben:</label>
+                <input type="number" id="minutes" min="1" placeholder="z.B. 10">
+                <button onclick="startCountdownByMinutes()">Start</button>
+            </div>
+
+            <p class="or-separator">ODER</p>
+
+            <div class="input-section">
+                <label for="target-time">Ziel-Uhrzeit eingeben:</label>
+                <input type="time" id="target-time">
+                <button onclick="startCountdownByTime()">Start</button>
+            </div>
+        </div>
+        
+        <div class="countdown-display">
+            <p id="message">Wähle einen Titel und eine Zeit.</p>
+            <div id="timer">00:00:00</div>
+            <button id="reset-button" onclick="resetApp()" style="display:none;">Neuer Countdown</button> 
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
